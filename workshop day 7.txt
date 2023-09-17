@@ -1,0 +1,25 @@
+public class CreateRecord {
+    Account acc=new Account();
+public object  accountRecord( string name,integer annualRevenue,string rating)
+{
+
+acc.Name=name;
+acc.AnnualRevenue=annualRevenue;
+acc.Rating=rating;
+insert acc;
+return acc;
+    
+} 
+public object contactRecord(string lastName,string leadSource,string phone)
+    {
+        Contact cont=new Contact();
+        cont.LastName=lastName;
+        cont.LeadSource=leadSource;
+        cont.Phone=phone;
+        cont.AccountId=acc.id;
+        insert cont;
+        return cont;
+       
+    }    
+
+}
